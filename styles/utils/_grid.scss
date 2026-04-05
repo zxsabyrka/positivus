@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.grid {
+  --gridColmn: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColmn), 1fr);
+  gap: 40px;
+
+  @include mobile {
+    gap: 30px;
+  }
+
+  @for $i from 2 through 12 {
+    &--#{$i} {
+      --gridColmn: #{$i};
+    }
+  }
+
+  &--2 {
+    @include tablet {
+      --gridColmn: 1;
+    }
+  }
+}
