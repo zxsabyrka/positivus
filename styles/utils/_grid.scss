@@ -22,4 +22,14 @@
       --gridColmn: 1;
     }
   }
+
+  &--3 {
+    @include desktop {
+      --gridColmn: 2;
+    }
+
+    @include mobile {
+      --gridColmn: 1;
+    }
+  }
 }
