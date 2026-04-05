@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .services {
   &__list {
     &:not(:last-child) {
